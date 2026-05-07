@@ -1,25 +1,18 @@
 # 天气良子 / Weather Yoshiko
 
-一个基于 Qt 6 的视觉小说 + 打砖块小游戏项目。
+一个基于 Qt 6 的视觉小说 + 内置小游戏项目。
 
 ---
 
 ## 项目简介
-
-大胃袋良子最爱吃板面，但是板面总是被范小勤偷吃。良子必须用他强大的胃袋击碎小勤的防御，揭开板面被盗的真相——然而真相远比他想象的要残酷……
-希望这个游戏能够温暖到大家
+根据天气之子改编。
+大胃袋良子最爱吃板面，但是板面总是被范小勤偷吃。良子必须用他强大的胃袋击碎小勤的防御，揭开板面被盗的真相——然而真相远比他想象的要残酷……希望这个游戏能够温暖到大家。
 本作包含：
 - **Galgame 式对话系统**：逐字显示文本，支持翻页、背景切换、音频播放
 - **开场 CG 动画**：v1.mp4 全屏播放
 - **小游戏**：操控丹尼尔的 V 形手臂反弹豆包，击碎魅魔，打败范小勤
 - **多结局对话**：通关后展开剧情对话，揭示世界观真相
 - **结尾 CG**：v2.mp4 + end.jpg 定格画面
-
----
-
-## 截图
-
-> TODO：添加游戏截图
 
 ---
 
@@ -43,10 +36,10 @@ tianqiliangzi/
 ├── main.cpp              # 入口
 ├── widget.h/cpp/ui       # 主界面（页面切换、事件处理）
 ├── resourcemanager.h/cpp # 资源路径管理
-├── dialogmanager.h/cpp   # Galgame 对话框系统（逐字动画）
-├── gamewidget.h/cpp      # 打砖块游戏控件
+├── dialogmanager.h/cpp   # 对话框系统（逐字动画）
+├── gamewidget.h/cpp      # 小游戏控件
 ├── gamescene.h/cpp       # 游戏场景（碰撞检测、游戏逻辑）
-├── ballitem.h/cpp        # 球体
+├── ballitem.h/cpp        # 豆包
 ├── brickitem.h/cpp       # 砖块
 ├── danielplayer.h/cpp    # 丹尼尔（玩家角色，V形手臂）
 ├── fanxiaoqin.h/cpp      # 范小勤（敌方方块）
@@ -101,10 +94,10 @@ windeployqt build-release/tianqiliangzi.exe --qmldir /path/to/Qt/qml
 
 | 操作 | 按键 |
 |------|------|
-| 推进对话 / 跳过 CG | 鼠标左键 / 回车 |
-| 打砖块 - 胳膊角度 | 鼠标移动 |
-| 打砖块 - 发射球 | 鼠标左键 |
-| 打砖块 - 通关（调试） | 回车键 |
+| 推进对话 / 跳过 CG | 回车键 |
+| 小游戏 - 调整胳膊角度 | 鼠标左键 |
+| 小游戏 - 发射豆包 | 空格 |
+| 小游戏 - 一键通关 | 回车键 |
 
 ---
 
@@ -113,8 +106,3 @@ windeployqt build-release/tianqiliangzi.exe --qmldir /path/to/Qt/qml
 本项目仅用于学习和娱乐目的。
 
 ---
-
-## 致谢
-
-- [Qt](https://www.qt.io/) - 跨平台 GUI 框架
-- 所有角色和剧情均为原创
