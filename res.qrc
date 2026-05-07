@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/cg">
+        <file>begin1.mp4</file>
+        <file>v1.mp4</file>
+    </qresource>
+</RCC>

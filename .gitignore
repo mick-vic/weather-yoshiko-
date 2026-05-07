@@ -1,0 +1,65 @@
+# Build directories
+build/
+*/build/
+_build/
+out/
+
+# CMake generated
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.qmake.stash
+.qmake.stash
+.qmake.stash
+.qtcreator/
+.qtc_clangd/
+
+# VS Code
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+
+# Compiled output
+*.exe
+*.dll
+*.so
+*.dylib
+*.obj
+*.o
+*.a
+*.lib
+*.exp
+*.pdb
+*.ilk
+*.idb
+
+# MOC/UIC/RCC generated
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+*_autogen/
+
+# Release / Packaging
+release/
+_package/
+*.zip
+*.7z
+*.tar.gz
+
+# IDE
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Qt resource files (keep res.qrc tracked)
+# *.qrc
