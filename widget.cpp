@@ -62,7 +62,7 @@ Widget::Widget(QWidget *parent)
     graphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     graphicsView->setBackgroundBrush(Qt::NoBrush);
 
-    QString bgImagePath = ResourceManager::getImagePath("Gemini_Generated_Image_wqj06awqj06awqj0.png");
+    QString bgImagePath = ResourceManager::getImagePath("xxx.png");
     QPixmap bgPixmap(bgImagePath);
     if (!bgPixmap.isNull()) {
         scene->addPixmap(bgPixmap.scaled(1280, 720, Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
@@ -70,19 +70,28 @@ Widget::Widget(QWidget *parent)
 
     QString btnImagePath = ResourceManager::getImagePath("begin.png");
     ui->startBtn->setParent(startPage);
-    ui->startBtn->setFixedSize(200, 60);
-    ui->startBtn->setText("开始游戏");
     ui->startBtn->setStyleSheet(
-        QString("QPushButton {"
-            "border-image: url(%1) 0 0 0 0 stretch stretch;"
-            "color: white;"
-            "font-size: 24px;"
-            "font-weight: bold;"
-            "border: none;"
-        "}")
-        .arg(btnImagePath)
+        "QPushButton {"
+        "background: transparent;"
+        "border: none;"
+        "color: rgba(255, 255, 255, 0);"
+        "}"
+        "QPushButton:hover {"
+        "background: rgba(255, 255, 255, 0.1);"
+        "}"
     );
-    ui->startBtn->move(50, 620);
+    if (QFileInfo(btnImagePath).exists()) {
+        ui->startBtn->setStyleSheet(
+            QString("QPushButton {"
+                "border-image: url(%1) 0 0 0 0 stretch stretch;"
+                "color: white;"
+                "font-size: 24px;"
+                "font-weight: bold;"
+                "border: none;"
+                "}")
+            .arg(btnImagePath)
+        );
+    }
 
     m_stackedWidget->addWidget(startPage);
 
@@ -639,3 +648,5 @@ Widget::~Widget()
     delete m_dialogLabel;
     delete ui;
 }
+
+

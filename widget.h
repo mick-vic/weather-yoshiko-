@@ -50,6 +50,8 @@ private slots:
     void onMiniGameLost();
     void onInterrogateClicked();
 
+    void on_startBtn_clicked();
+
 private:
     void cleanupDialogUI();
     void showInterrogationDialog();
@@ -70,8 +72,9 @@ private:
     DialogManager *m_dialogManager;
     GameWidget *m_gameWidget;
     QString m_pendingAudioFile;
-    bool m_gameActive;
-    bool m_interrogationMode;
-    bool m_endScreenActive;
+    bool m_gameActive;        // 打砖块游戏是否进行中
+    bool m_interrogationMode; // 是否在审讯对话阶段
+    bool m_endScreenActive;   // 是否在结尾定格画面
+
 };
 #endif // WIDGET_H
